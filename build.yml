@@ -20,8 +20,12 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       -
         name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: besse/efrei-devops-tp2:latest
+        run : docker build -t $USERNAME/efrei-devops-tp2:latest.
+              docker push $USERNAME/efrei-devops-tp2:latest
+        #uses: docker/build-push-action@v3
+        #with:
+          #context: .
+          #push: true
+          #tags: besse/efrei-devops-tp2:latest
+        env:
+          USERNAME: ${{ secrets.DOCKER_USERNAME}}
