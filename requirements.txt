@@ -2,4 +2,4 @@ Flask==2.1.2
 Flask_RESTful==0.3.9
 marshmallow==3.16.0
 requests==2.27.1
-MarkupSafe==2.0.1
+markupSafe==2.0.1
